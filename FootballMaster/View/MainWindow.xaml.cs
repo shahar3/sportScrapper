@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FootballMaster.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace FootballMaster
     /// </summary>
     public partial class MainWindow : Window
     {
+        MyViewModel vm;
+
         public MainWindow()
         {
             InitializeComponent();
+            vm = new MyViewModel(new Model.MyModel());
+            this.DataContext = vm;
         }
     }
 }
