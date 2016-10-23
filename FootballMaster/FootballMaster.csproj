@@ -67,6 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\ClubPosition.cs" />
+    <Compile Include="Model\League.cs" />
     <Compile Include="Model\LinkFinder.cs" />
     <Compile Include="Model\MyModel.cs" />
     <Compile Include="Model\Spider.cs" />

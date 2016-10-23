@@ -25,6 +25,15 @@ namespace FootballMaster.Model
             htmlDoc = web.Load(BASE_URL);
             LinkFinder finder = new LinkFinder(htmlDoc);
             countryLinks = finder.getLinks();
+            sendSpiders();
+        }
+
+        /// <summary>
+        /// send spiders simultaneously
+        /// </summary>
+        private void sendSpiders()
+        {
+            Spider spider = new Spider(countryLinks["Israel"], BASE_URL);
         }
 
         #region event triggered

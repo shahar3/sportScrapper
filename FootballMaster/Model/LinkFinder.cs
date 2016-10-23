@@ -37,7 +37,7 @@ namespace FootballMaster.Model
                 if (index > 2 && index % 2 == 0)
                 {
                     //get the url
-                    link = node.GetAttributeValue("value","");
+                    link = BASE_URL + node.GetAttributeValue("value","");
                     index++;
                 }
                 else
@@ -46,7 +46,7 @@ namespace FootballMaster.Model
                     {
                         //get the country name
                         string countryName = node.InnerText.Trim();
-                        links[countryName.Substring(0,countryName.IndexOf("("))] = link;
+                        links[countryName.Substring(0,countryName.IndexOf("(")-1)] = link;
                     }
                     index++;
                     continue;
